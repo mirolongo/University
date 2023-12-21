@@ -17,6 +17,10 @@ public abstract class User {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public User() {
+
+    }
+
     public void saveToMongoDB() {
         MongoDatabase mongoDatabase = MongoDBConnection.connect();
         MongoCollection<Document> userCollection = mongoDatabase.getCollection("users");
